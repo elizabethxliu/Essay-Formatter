@@ -1,0 +1,35 @@
+<script>
+$(document).ready(function(){  
+  
+  /* Opens up the form when the user clicks 'Set Info' */
+  $("#set-info-button").click(function(){
+    $("#set-info-form").show();
+    $("#set-info-button").hide();
+  });
+  
+  /* Hides the form again if the user clicks 'Back' */
+  $("#back-button").click(function(){
+    $("#set-info-form").hide();
+    $("#set-info-button").show();
+  });
+  
+  /* Calls the gs function to save the user's entered information upon user hitting 'Save'
+   * Prevents saving and alerts user if any fields are empty
+   */
+  $("#save-button").click(function(){
+    var firstName = $("#first-name").val();
+    var lastName = $("#last-name").val();
+    var teacherName = $("#teacher-name").val();
+    var courseName = $("#course-name").val();
+    if(firstName.length===0 || lastName.length===0 || teacherName.length===0 || courseName.length===0) {
+      $(".error").text("Please fill out all fields before saving.");
+    }
+    else {
+      google.script.run.saveInfo(firstName, lastName, teacherName, courseName);
+      $("#set-info").hide();
+      $("#format-button").show();
+      $("#instructions").text("Saved.");
+    }
+  });
+});
+</script>
