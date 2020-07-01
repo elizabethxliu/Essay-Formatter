@@ -9,7 +9,7 @@ Main menu of sidebar UI:
 ![Image of sidebar](/assets/menu.png)
 
 Set info:
-![Image of set info](/assets/set info.png)
+![Image of set info](/assets/set_info.png)
 
 Finished example:
 ![Image of formatted example](/assets/example.png)
