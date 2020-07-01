@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('stylesheet'); ?>
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Essay Formatter</h1>
+    <p id="instructions">Click "Set Info" to create personalized headings for your essays.</p>
+    <div id="set-info">
+      <button class="action" id="set-info-button">Set Info</button>
+      <div id="set-info-form">
+        <form>
+          <label for="first-name">First Name</label><br>
+          <input type="text" class="text-field" id="first-name" /><br>
+          <label for="last-name">Last Name</label><br>
+          <input type="text" class="text-field" id="last-name" /><br>
+          <label for="teacher-name">Teacher Name</label><br>
+          <input type="text" class="text-field" id="teacher-name" /><br>
+          <label for="course-name">Course Name</label><br>
+          <input type="text" class="text-field" id="course-name" /><br>
+          <p><span class="error"></span></p>
+          <button class="action" id="save-button">Save</button>
+          <button id="back-button">Back</button>
+        </form>
+      </div>
+    </div>
+    <button class="action" id="format-button" onclick="google.script.run.format()">Format</button>
+    <button class="close-button" onclick="google.script.host.close()">Close</button>
+    <?!= include('javascript'); ?>
+  </body>
+</html>
