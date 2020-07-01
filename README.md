@@ -5,10 +5,8 @@ You can enter and save your headings information (such as name, class, or teache
 Dropdown menu:
 ![Image of dropdown](/assets/dropdown.png)
 
-Main menu of sidebar UI:
+Use the sidebar to enter your information:
 ![Image of sidebar](/assets/menu.png)
-
-Set info:
 ![Image of set info](/assets/set_info.png)
 
 Finished example:
